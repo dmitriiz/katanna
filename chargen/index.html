@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Generator</title>
+</head>
+<body onload="renew()">
+<table>
+    <caption>Character info</caption>
+    <tbody>
+    <tr>
+        <td>Пол</td>
+        <td id="ch-gender"></td>
+    </tr>
+    <tr>
+        <td>Возраст</td>
+        <td id="ch-age">*</td>
+    </tr>
+    <tr>
+        <td>Длина волос</td>
+        <td id="ch-hair-length">*</td>
+    </tr>
+    <tr>
+        <td>Цвет волос</td>
+        <td id="ch-hair-color">*</td>
+    </tr>
+    <tr>
+        <td>Прическа</td>
+        <td id="ch-hair-style">*</td>
+    </tr>
+    <tr>
+        <td>Форма глаз</td>
+        <td id="ch-eye-style">*</td>
+    </tr>
+    <tr>
+        <td>Цвет глаз</td>
+        <td id="ch-eye-color">*</td>
+    </tr>
+    <tr>
+        <td>Цвет кожи</td>
+        <td id="ch-skin-color">*</td>
+    </tr>
+    <tr>
+        <td>Одежда верх</td>
+        <td id="ch-top-type">*</td>
+    </tr>
+    <tr>
+        <td>Одежда верх цвет</td>
+        <td id="ch-top-color">*</td>
+    </tr>
+    <tr>
+        <td>Одежда низ</td>
+        <td id="ch-bottom=type">*</td>
+    </tr>
+    <tr>
+        <td>Одежда низ цвет</td>
+        <td id="ch-bottom-color">*</td>
+    </tr>
+    <tr>
+        <td>Эмоция</td>
+        <td id="ch-emotion">*</td>
+    </tr>
+    <tr>
+        <td>Поза</td>
+        <td id="ch-pose">*</td>
+    </tr>
+    <tr>
+        <td>Аксессуары</td>
+        <td id="ch-accessories">*</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" onclick="renew()" value="Новый">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script language="JavaScript">
+    const colors = ["белый", "черный", "красный", "зеленый", "синий"];
+    const properties = {
+        "ch-gender": ["муж", "жен"],
+        "ch-age": ["малыш", "ребенок", "подросток", "взрослый", "старый"],
+        "ch-hair-length": ["короткие", "средние", "длинные", "очень длинные"],
+        "ch-hair-color": colors,
+        "ch-hair-style": ["прямые", "волнистые", "кудрявые", "хвост"],
+        "ch-eye-style": ["узкие", "средние", "широкие"],
+        "ch-eye-color": ["карие", "зеленые", "синие"],
+        "ch-skin-color": ["бледная", "обычная", "смуглая", "темная"],
+        "ch-top-type": ["майка", "футболка", "свитер"],
+        "ch-top-color": colors,
+        "ch-bottom=type": ["шорты", "штаны", "юбка"],
+        "ch-bottom-color": colors,
+        "ch-emotion": ["улыбка", "грусть", "злость", "ухмылка"],
+        "ch-pose": ["герой", "рука за головой", "свободная"],
+        "ch-accessories": ["цепочка", "перчатки", "татуировка"],
+    };
+
+
+    function renew() {
+        for (const key in properties) {
+            const values = properties[key];
+            const n = Math.floor(Math.random() * values.length);
+            const e = document.getElementById(key);
+            e.innerText = values[n];
+        }
+    }
+</script>
+</body>
+</html>
