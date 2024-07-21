@@ -3,78 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Character Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="renew()">
-<table>
-    <caption>Character info</caption>
-    <tbody>
-    <tr>
-        <td>Пол</td>
-        <td id="ch-gender"></td>
-    </tr>
-    <tr>
-        <td>Возраст</td>
-        <td id="ch-age">*</td>
-    </tr>
-    <tr>
-        <td>Длина волос</td>
-        <td id="ch-hair-length">*</td>
-    </tr>
-    <tr>
-        <td>Цвет волос</td>
-        <td id="ch-hair-color">*</td>
-    </tr>
-    <tr>
-        <td>Прическа</td>
-        <td id="ch-hair-style">*</td>
-    </tr>
-    <tr>
-        <td>Форма глаз</td>
-        <td id="ch-eye-style">*</td>
-    </tr>
-    <tr>
-        <td>Цвет глаз</td>
-        <td id="ch-eye-color">*</td>
-    </tr>
-    <tr>
-        <td>Цвет кожи</td>
-        <td id="ch-skin-color">*</td>
-    </tr>
-    <tr>
-        <td>Одежда верх</td>
-        <td id="ch-top-type">*</td>
-    </tr>
-    <tr>
-        <td>Одежда верх цвет</td>
-        <td id="ch-top-color">*</td>
-    </tr>
-    <tr>
-        <td>Одежда низ</td>
-        <td id="ch-bottom=type">*</td>
-    </tr>
-    <tr>
-        <td>Одежда низ цвет</td>
-        <td id="ch-bottom-color">*</td>
-    </tr>
-    <tr>
-        <td>Эмоция</td>
-        <td id="ch-emotion">*</td>
-    </tr>
-    <tr>
-        <td>Поза</td>
-        <td id="ch-pose">*</td>
-    </tr>
-    <tr>
-        <td>Аксессуары</td>
-        <td id="ch-accessories">*</td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <input type="button" onclick="renew()" value="Новый">
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table>
+        <caption>Character info</caption>
+        <tbody>
+        <tr>
+            <td>Пол</td>
+            <td id="ch-gender"></td>
+        </tr>
+        <tr>
+            <td>Возраст</td>
+            <td id="ch-age">*</td>
+        </tr>
+        <tr>
+            <td>Длина волос</td>
+            <td id="ch-hair-length">*</td>
+        </tr>
+        <tr>
+            <td>Цвет волос</td>
+            <td id="ch-hair-color">*</td>
+        </tr>
+        <tr>
+            <td>Прическа</td>
+            <td id="ch-hair-style">*</td>
+        </tr>
+        <tr>
+            <td>Форма глаз</td>
+            <td id="ch-eye-style">*</td>
+        </tr>
+        <tr>
+            <td>Цвет глаз</td>
+            <td id="ch-eye-color">*</td>
+        </tr>
+        <tr>
+            <td>Цвет кожи</td>
+            <td id="ch-skin-color">*</td>
+        </tr>
+        <tr>
+            <td>Одежда верх</td>
+            <td id="ch-top-type">*</td>
+        </tr>
+        <tr>
+            <td>Одежда верх цвет</td>
+            <td id="ch-top-color">*</td>
+        </tr>
+        <tr>
+            <td>Одежда низ</td>
+            <td id="ch-bottom=type">*</td>
+        </tr>
+        <tr>
+            <td>Одежда низ цвет</td>
+            <td id="ch-bottom-color">*</td>
+        </tr>
+        <tr>
+            <td>Эмоция</td>
+            <td id="ch-emotion">*</td>
+        </tr>
+        <tr>
+            <td>Поза</td>
+            <td id="ch-pose">*</td>
+        </tr>
+        <tr>
+            <td>Аксессуары</td>
+            <td id="ch-accessories">*</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="centered">
+                <input type="button" onclick="renew()" value="Новый">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <script language="JavaScript">
     const colors = ["белый", "черный", "красный", "зеленый", "синий"];
     const properties = {
